@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "aa",
+    "ll"
+  ],
+  "key": {
+    "a": {
+      "item": "fabrictinkering:pattern"
+    },
+    "l": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "fabrictinkering:part_builder"
+  }
+}
