@@ -2,7 +2,6 @@ package net.bruhcraft.fabrictinkering.registries;
 
 import net.bruhcraft.fabrictinkering.registries.blocks.tables.part_builder;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
