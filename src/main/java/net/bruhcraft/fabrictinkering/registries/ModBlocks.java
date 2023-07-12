@@ -2,6 +2,7 @@ package net.bruhcraft.fabrictinkering.registries;
 
 import net.bruhcraft.fabrictinkering.registries.blocks.tables.part_builder;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
@@ -14,8 +15,8 @@ import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 public class ModBlocks {
 
     //Item Vars
-        //Introduction TODO: Make textures work
-    public static final Block PART_BUILDER = new part_builder();
+        //Introduction
+    public static final Block PART_BUILDER = new part_builder(FabricBlockSettings.create().burnable().nonOpaque());
 
     //registerModStuff
     public static void registerModBlocks(){

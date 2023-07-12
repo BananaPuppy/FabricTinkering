@@ -12,24 +12,23 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
-import static net.bruhcraft.fabrictinkering.registries.ModItemGroups.MATERIALS_AND_YOU_GROUP;
+import static net.bruhcraft.fabrictinkering.util.ItemGroupRegister.registerItemGroup;
 
 public class ModItems {
 
     //Item Vars
         //Misc
     public static final Item MATERIALS_AND_YOU = new materials_and_you(new FabricItemSettings().maxCount(1));
+    public static RegistryKey<ItemGroup> MATERIALS_AND_YOU_GROUP = registerItemGroup("Materials and You", MATERIALS_AND_YOU);
         //Introduction
     public static final Item PATTERN = new Item(new FabricItemSettings().maxCount(64));
     public static final BlockItem PART_BUILDER = new BlockItem(ModBlocks.PART_BUILDER, new FabricItemSettings().maxCount(64));
 
     //registerModStuff
     public static void registerModItems(){
-            //Misc TODO: make group work lol
-        registerItemToGroup(
-                MATERIALS_AND_YOU_GROUP,
-                registerItem("materials_and_you", MATERIALS_AND_YOU)
-        );
+            //Misc
+        registerItem("materials_and_you", MATERIALS_AND_YOU);
+        registerItemToGroup(MATERIALS_AND_YOU_GROUP, MATERIALS_AND_YOU);
             //Introduction
         registerItem("pattern", PATTERN);
         registerItem("part_builder", PART_BUILDER);

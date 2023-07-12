@@ -2,7 +2,6 @@ package net.bruhcraft.fabrictinkering.util;
 
 import static net.bruhcraft.fabrictinkering.MainClass.*;
 import static net.bruhcraft.fabrictinkering.registries.ModBlocks.registerModBlocks;
-import static net.bruhcraft.fabrictinkering.registries.ModItemGroups.registerModItemGroups;
 import static net.bruhcraft.fabrictinkering.registries.ModItems.registerModItems;
 
 public class ModRegistries {
@@ -14,9 +13,5 @@ public class ModRegistries {
         LOGGER.info("Fabric Tinkering: Blocks Registering");
         registerModBlocks();
         LOGGER.info("Fabric Tinkering: Blocks Registered");
-
-        LOGGER.info("Fabric Tinkering: ItemGroups Registering");
-        registerModItemGroups();
-        LOGGER.info("Fabric Tinkering: ItemGroups Registered");
     }
 }

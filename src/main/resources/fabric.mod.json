@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"net.bruhcraft.fabrictinkering.MainClass"
+		],
+		"client": [
+			"net.bruhcraft.fabrictinkering.MainClassClient"
 		]
 	},
 	"mixins": [
