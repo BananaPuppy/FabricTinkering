@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fabrictinkering:item/test_tool_handle",
+    "layer1": "fabrictinkering:item/test_tool_head"
+  }
+}

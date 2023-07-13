@@ -2,6 +2,7 @@
   "item.fabrictinkering.materials_and_you": "Materials and You",
   "item.fabrictinkering.materials_and_you.tooltip": "The introduction book into tools and materials",
   "item.fabrictinkering.materials_and_you.tooltip2": "by Selena",
+
   "item.fabrictinkering.pattern": "Pattern",
   "block.fabrictinkering.part_builder": "Part Builder",
   "block.fabrictinkering.tinker_station": "Tinker Station",
@@ -12,5 +13,22 @@
 
   "item.fabrictinkering.puny_smelting": "Puny Smelting",
   "item.fabrictinkering.puny_smelting.tooltip": "Smelting and casting guidebook for beginners",
-  "item.fabrictinkering.puny_smelting.tooltip2": "by Thruul M'Gon"
+  "item.fabrictinkering.puny_smelting.tooltip2": "by Thruul M'Gon",
+
+  "item.fabrictinkering.base.tooltip": "Place in inventory to initialize Random materials",
+  "item.fabrictinkering.repair_kit": "Repair Kit",
+  "item.fabrictinkering.pick_head": "Pick Head",
+  "item.fabrictinkering.hammer_head": "Hammer Head",
+  "item.fabrictinkering.small_axe_head": "Small Axe Head",
+  "item.fabrictinkering.broad_axe_head": "Broad Axe Head",
+  "item.fabrictinkering.small_blade": "Small Blade",
+  "item.fabrictinkering.broad_blade": "Broad Blade",
+  "item.fabrictinkering.round_plate": "Round Plate",
+  "item.fabrictinkering.large_plate": "Large Plate",
+  "item.fabrictinkering.bow_limb": "Bow Limb",
+  "item.fabrictinkering.bow_grip": "Bow Grip",
+  "item.fabrictinkering.bowstring": "Bowstring",
+  "item.fabrictinkering.tool_binding": "Tool Binding",
+  "item.fabrictinkering.tool_handle": "Tool Handle",
+  "item.fabrictinkering.tough_handle": "Tough Handle"
 }
