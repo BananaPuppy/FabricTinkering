@@ -5,5 +5,6 @@
   "item.fabrictinkering.pattern": "Pattern",
   "block.fabrictinkering.part_builder": "Part Builder",
   "block.fabrictinkering.tinker_station": "Tinker Station",
-  "block.fabrictinkering.tinker_station": "Part Chest"
+  "block.fabrictinkering.part_chest": "Part Chest",
+  "block.fabrictinkering.tinkers_chest": "Tinker's Chest"
 }

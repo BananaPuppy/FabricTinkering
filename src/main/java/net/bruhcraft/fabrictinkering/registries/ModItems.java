@@ -27,6 +27,7 @@ public class ModItems {
     public static final BlockItem PART_BUILDER = new BlockItem(ModBlocks.PART_BUILDER, new FabricItemSettings().maxCount(64));
     public static final BlockItem TINKER_STATION = new BlockItem(ModBlocks.TINKER_STATION, new FabricItemSettings().maxCount(64));
     public static final BlockItem PART_CHEST = new BlockItem(ModBlocks.PART_CHEST, new FabricItemSettings().maxCount(64));
+    public static final BlockItem TINKERS_CHEST = new BlockItem(ModBlocks.TINKERS_CHEST, new FabricItemSettings().maxCount(64));
     //registerModStuff
     public static void registerModItems(){
             //Misc
@@ -38,7 +39,8 @@ public class ModItems {
                         registerItem("pattern", PATTERN),
                         registerItem("part_builder", PART_BUILDER),
                         registerItem("tinker_station", TINKER_STATION),
-                        registerItem("part_chest", PART_CHEST)
+                        registerItem("part_chest", PART_CHEST),
+                        registerItem("tinkers_chest", TINKERS_CHEST)
                 )
         );
     }

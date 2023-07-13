@@ -1,6 +1,7 @@
 package net.bruhcraft.fabrictinkering.registries;
 
 import net.bruhcraft.fabrictinkering.registries.blocks.chests.part_chest;
+import net.bruhcraft.fabrictinkering.registries.blocks.chests.tinkers_chest;
 import net.bruhcraft.fabrictinkering.registries.blocks.tables.part_builder;
 import net.bruhcraft.fabrictinkering.registries.blocks.tables.tinker_station;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -21,6 +22,7 @@ public class ModBlocks {
     public static final Block PART_BUILDER = new part_builder(FabricBlockSettings.create().burnable().nonOpaque());
     public static final Block TINKER_STATION = new tinker_station(FabricBlockSettings.create().burnable().nonOpaque());
     public static final Block PART_CHEST = new part_chest(FabricBlockSettings.create().burnable().nonOpaque());
+    public static final Block TINKERS_CHEST = new tinkers_chest(FabricBlockSettings.create().burnable().nonOpaque());
 
     //registerModStuff
     public static void registerModBlocks(){
@@ -28,6 +30,7 @@ public class ModBlocks {
         registerBlock("part_builder", PART_BUILDER);
         registerBlock("tinker_station", TINKER_STATION);
         registerBlock("part_chest", PART_CHEST);
+        registerBlock("tinkers_chest", TINKERS_CHEST);
     }
 
     //Util

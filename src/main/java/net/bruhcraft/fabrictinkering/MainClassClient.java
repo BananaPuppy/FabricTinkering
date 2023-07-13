@@ -18,7 +18,8 @@ public class MainClassClient implements ClientModInitializer {
 		renderLayerCutout(List.of(
 				ModBlocks.PART_BUILDER,
 				ModBlocks.TINKER_STATION,
-				ModBlocks.PART_CHEST
+				ModBlocks.PART_CHEST,
+				ModBlocks.TINKERS_CHEST
 		));
 	}
 

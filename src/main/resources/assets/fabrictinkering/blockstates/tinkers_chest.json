@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "fabrictinkering:block/chest/tinkers/tinkers_chest"
+		},
+		"facing=south": {
+			"model": "fabrictinkering:block/chest/tinkers/tinkers_chest",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "fabrictinkering:block/chest/tinkers/tinkers_chest",
+			"y": 270
+		},
+		"facing=east": {
+			"model": "fabrictinkering:block/chest/tinkers/tinkers_chest",
+			"y": 90
+		}
+	}
+}

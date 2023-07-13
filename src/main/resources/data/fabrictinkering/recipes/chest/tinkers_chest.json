@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " a ",
+    "scs",
+    "sls"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:chest"
+    },
+    "s": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "a": {
+      "item": "fabrictinkering:pattern"
+    },
+    "l": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "fabrictinkering:tinkers_chest"
+  }
+}

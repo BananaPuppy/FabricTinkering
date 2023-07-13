@@ -1,18 +1,18 @@
 {
 	"variants": {
 		"facing=north": {
-			"model": "fabrictinkering:block/chest/part_chest"
+			"model": "fabrictinkering:block/chest/part/part_chest"
 		},
 		"facing=south": {
-			"model": "fabrictinkering:block/chest/part_chest",
+			"model": "fabrictinkering:block/chest/part/part_chest",
 			"y": 180
 		},
 		"facing=west": {
-			"model": "fabrictinkering:block/chest/part_chest",
+			"model": "fabrictinkering:block/chest/part/part_chest",
 			"y": 270
 		},
 		"facing=east": {
-			"model": "fabrictinkering:block/chest/part_chest",
+			"model": "fabrictinkering:block/chest/part/part_chest",
 			"y": 90
 		}
 	}

@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "fabrictinkering:block/chest/top",
-		"2": "fabrictinkering:block/chest/drawer_front",
-		"3": "fabrictinkering:block/chest/side",
-		"particle": "fabrictinkering:block/chest/top"
+		"1": "fabrictinkering:block/chest/part/top",
+		"2": "fabrictinkering:block/chest/part/drawer_front",
+		"3": "fabrictinkering:block/chest/part/side",
+		"particle": "fabrictinkering:block/chest/part/top"
 	},
 	"elements": [
 		{
