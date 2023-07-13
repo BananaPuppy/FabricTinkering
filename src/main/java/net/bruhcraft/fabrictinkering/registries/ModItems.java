@@ -11,6 +11,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
+
 import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 import static net.bruhcraft.fabrictinkering.util.ItemGroupRegister.registerItemGroup;
 
@@ -23,15 +25,22 @@ public class ModItems {
         //Introduction
     public static final Item PATTERN = new Item(new FabricItemSettings().maxCount(64));
     public static final BlockItem PART_BUILDER = new BlockItem(ModBlocks.PART_BUILDER, new FabricItemSettings().maxCount(64));
-
+    public static final BlockItem TINKER_STATION = new BlockItem(ModBlocks.TINKER_STATION, new FabricItemSettings().maxCount(64));
+    public static final BlockItem PART_CHEST = new BlockItem(ModBlocks.PART_CHEST, new FabricItemSettings().maxCount(64));
     //registerModStuff
     public static void registerModItems(){
             //Misc
         registerItem("materials_and_you", MATERIALS_AND_YOU);
         registerItemToGroup(MATERIALS_AND_YOU_GROUP, MATERIALS_AND_YOU);
             //Introduction
-        registerItem("pattern", PATTERN);
-        registerItem("part_builder", PART_BUILDER);
+        registerItemsToGroup(MATERIALS_AND_YOU_GROUP,
+                List.of(
+                        registerItem("pattern", PATTERN),
+                        registerItem("part_builder", PART_BUILDER),
+                        registerItem("tinker_station", TINKER_STATION),
+                        registerItem("part_chest", PART_CHEST)
+                )
+        );
     }
 
     //Util
@@ -41,5 +50,11 @@ public class ModItems {
 
     public static void registerItemToGroup(RegistryKey<ItemGroup> group, Item item){
         ItemGroupEvents.modifyEntriesEvent(group).register(content -> content.add(item));
+    }
+
+    public static void registerItemsToGroup(RegistryKey<ItemGroup> group, List<Item> items){
+        for(Item item : items){
+            registerItemToGroup(group, item);
+        }
     }
 }

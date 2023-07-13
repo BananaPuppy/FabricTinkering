@@ -3,5 +3,7 @@
   "item.fabrictinkering.materials_and_you.tooltip": "The introduction book into tools and materials",
 
   "item.fabrictinkering.pattern": "Pattern",
-  "block.fabrictinkering.part_builder": "Part Builder"
+  "block.fabrictinkering.part_builder": "Part Builder",
+  "block.fabrictinkering.tinker_station": "Tinker Station",
+  "block.fabrictinkering.tinker_station": "Part Chest"
 }

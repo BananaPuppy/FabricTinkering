@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "fabrictinkering:block/table/part_builder_top",
+		"1": "fabrictinkering:block/table/tinker_station_top",
 		"2": "fabrictinkering:block/table/bottom",
 		"3": "fabrictinkering:block/table/side",
 		"particle": "fabrictinkering:block/table/bottom"
