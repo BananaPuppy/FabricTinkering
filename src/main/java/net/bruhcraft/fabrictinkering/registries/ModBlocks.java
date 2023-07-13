@@ -4,13 +4,10 @@ import net.bruhcraft.fabrictinkering.registries.blocks.chests.part_chest;
 import net.bruhcraft.fabrictinkering.registries.blocks.chests.tinkers_chest;
 import net.bruhcraft.fabrictinkering.registries.blocks.tables.part_builder;
 import net.bruhcraft.fabrictinkering.registries.blocks.tables.tinker_station;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
