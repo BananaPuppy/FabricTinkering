@@ -10,8 +10,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class materials_and_you extends Item {
-    public materials_and_you(Settings settings) {
+public class puny_smelting extends Item {
+    public puny_smelting(Settings settings) {
         super(settings);
     }
 
@@ -24,8 +24,8 @@ public class materials_and_you extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.fabrictinkering.materials_and_you.tooltip").formatted(Formatting.GRAY));
-        tooltip.add(Text.translatable("item.fabrictinkering.materials_and_you.tooltip2").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.fabrictinkering.puny_smelting.tooltip").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.fabrictinkering.puny_smelting.tooltip2").formatted(Formatting.GRAY));
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

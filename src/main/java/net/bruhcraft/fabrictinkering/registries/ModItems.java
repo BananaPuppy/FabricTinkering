@@ -1,6 +1,8 @@
 package net.bruhcraft.fabrictinkering.registries;
 
 import net.bruhcraft.fabrictinkering.registries.items.materials_and_you;
+import net.bruhcraft.fabrictinkering.registries.items.puny_smelting;
+import net.bruhcraft.fabrictinkering.registries.items.smeltery.seared.grout;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
@@ -19,30 +21,36 @@ import static net.bruhcraft.fabrictinkering.util.ItemGroupRegister.registerItemG
 public class ModItems {
 
     //Item Vars
-        //Misc
+        //Materials & You
     public static final Item MATERIALS_AND_YOU = new materials_and_you(new FabricItemSettings().maxCount(1));
     public static RegistryKey<ItemGroup> MATERIALS_AND_YOU_GROUP = registerItemGroup("Materials and You", MATERIALS_AND_YOU);
-        //Introduction
     public static final Item PATTERN = new Item(new FabricItemSettings().maxCount(64));
     public static final BlockItem PART_BUILDER = new BlockItem(ModBlocks.PART_BUILDER, new FabricItemSettings().maxCount(64));
     public static final BlockItem TINKER_STATION = new BlockItem(ModBlocks.TINKER_STATION, new FabricItemSettings().maxCount(64));
     public static final BlockItem PART_CHEST = new BlockItem(ModBlocks.PART_CHEST, new FabricItemSettings().maxCount(64));
     public static final BlockItem TINKERS_CHEST = new BlockItem(ModBlocks.TINKERS_CHEST, new FabricItemSettings().maxCount(64));
+    public static final BlockItem GROUT = new grout(ModBlocks.GROUT, new FabricItemSettings().maxCount(64));
+    //Puny Smelting
+    public static final Item PUNY_SMELTING = new puny_smelting(new FabricItemSettings().maxCount(1));
+    public static RegistryKey<ItemGroup> PUNY_SMELTING_GROUP = registerItemGroup("Puny Smelting", PUNY_SMELTING);
+
     //registerModStuff
     public static void registerModItems(){
-            //Misc
+            //Materials & You
         registerItem("materials_and_you", MATERIALS_AND_YOU);
         registerItemToGroup(MATERIALS_AND_YOU_GROUP, MATERIALS_AND_YOU);
-            //Introduction
         registerItemsToGroup(MATERIALS_AND_YOU_GROUP,
                 List.of(
                         registerItem("pattern", PATTERN),
                         registerItem("part_builder", PART_BUILDER),
                         registerItem("tinker_station", TINKER_STATION),
                         registerItem("part_chest", PART_CHEST),
-                        registerItem("tinkers_chest", TINKERS_CHEST)
+                        registerItem("tinkers_chest", TINKERS_CHEST),
+                        registerItem("grout", GROUT)
                 )
         );
+        registerItem("puny_smelting", PUNY_SMELTING);
+        registerItemToGroup(PUNY_SMELTING_GROUP, PUNY_SMELTING);
     }
 
     //Util
