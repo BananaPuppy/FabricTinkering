@@ -1,5 +1,6 @@
 package net.bruhcraft.fabrictinkering.util;
 
+import net.bruhcraft.fabrictinkering.MainClass;
 import net.bruhcraft.fabrictinkering.registries.ModMaterials;
 import net.bruhcraft.fabrictinkering.supers.Material;
 import net.bruhcraft.fabrictinkering.supers.Part;
@@ -7,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import org.apache.logging.log4j.core.filter.RegexFilter;
 
 import java.util.List;
 
@@ -16,30 +18,25 @@ import static net.bruhcraft.fabrictinkering.registries.ModRegisters.MATERIAL_REG
 public class MaterialUtil {
     static String MATERIAL_KEY = "material";
 
-    public static ItemStack setMaterial(ItemStack itemStack, Material material){
-        if(material.getPath().equals("__null__")){
-            itemStack.removeSubNbt(MATERIAL_KEY);
-        } else {
-            Identifier identifier = MATERIAL_REGISTRY.getId(material);
-            //TODO: PLACE TO REDUCE NULL
-            itemStack.getOrCreateNbt().putString(MATERIAL_KEY, identifier.getPath());
-            itemStack.setCustomName(Text.translatable(itemStack.getItem().getTranslationKey()));
+    public static ItemStack setMaterial(ItemStack itemStack, Material material) {
+        if (material != null) {
+            String path = material.getID().getPath();
+            itemStack.getOrCreateNbt().putString(MATERIAL_KEY, path);
+            //TODO: Dynamic Translation Key here?
         }
         return itemStack;
     }
 
-    public static Identifier identifierFromPath(String path){
-        path = path.replaceAll("[^a-z0-9/.-_]", "");
-        return new Identifier(MOD_ID, path);
-    }
-
     public static Material materialFromItemStack(ItemStack itemStack){
-        NbtCompound nbt = new NbtCompound();
-        itemStack.writeNbt(nbt);
-        if(nbt.contains(MATERIAL_KEY)){
+        NbtCompound nbt = itemStack.getNbt();
+        if(nbt != null && nbt.getString(MATERIAL_KEY) != null){
+            MainClass.LOGGER.info("LINE CHECKER");
             String path = nbt.getString(MATERIAL_KEY);
-            Identifier identifier = identifierFromPath(path);
-            return MATERIAL_REGISTRY.get(identifier);
+            Identifier identifier = Util.identifierFromPath(path);
+            Material material = MATERIAL_REGISTRY.get(identifier);
+            if(material != null){
+                return material;
+            }
         }
         return ModMaterials.NO_MATERIAL;
     }
@@ -48,10 +45,10 @@ public class MaterialUtil {
         NbtCompound nbt = itemStack.getNbt();
         if(nbt != null && nbt.contains("material")){
             String path = nbt.getString("material");
-            Identifier identifier = new Identifier(MOD_ID, path);
-            if(MATERIAL_REGISTRY.get(identifier) != null){
-                //TODO: NULL
-                return MATERIAL_REGISTRY.get(identifier).getPredicate();
+            Identifier identifier = Util.identifierFromPath(path);
+            Material material = MATERIAL_REGISTRY.get(identifier);
+            if(material != null){
+                return material.getPredicate();
             }
         }
         return 0.0f;

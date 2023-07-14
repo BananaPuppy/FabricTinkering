@@ -69,6 +69,6 @@ public class ModParts {
     //Util
     //TODO: Material Groups
     public static Part registerPart(Part part) {
-        return Registry.register(PART_REGISTRY, new Identifier(MOD_ID, part.getPath()), part);
+        return Registry.register(PART_REGISTRY, new Identifier(MOD_ID, part.getID().getPath()), part);
     }
 }

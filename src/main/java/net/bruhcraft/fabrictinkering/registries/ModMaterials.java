@@ -151,7 +151,7 @@ public class ModMaterials {
     //Util
     //TODO: Material Groups
     public static Material registerMaterial(Material material) {
-        Identifier identifier = new Identifier(MOD_ID, material.getPath());
+        Identifier identifier = new Identifier(MOD_ID, material.getID().getPath());
         return Registry.register(MATERIAL_REGISTRY, identifier, material);
     }
 }

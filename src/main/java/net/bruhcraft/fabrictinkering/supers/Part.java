@@ -1,8 +1,11 @@
 package net.bruhcraft.fabrictinkering.supers;
 
 import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
+
+import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 
 public class Part {
     private final String path;
@@ -37,8 +40,8 @@ public class Part {
         return materials.contains(material);
     }
 
-    public String getPath(){
-        return this.path;
+    public Identifier getID(){
+        return new Identifier(MOD_ID, this.path);
     }
 
     public Item getBaseItem(){

@@ -1,6 +1,7 @@
 package net.bruhcraft.fabrictinkering.util;
 
 import net.bruhcraft.fabrictinkering.registries.ModParts;
+import net.bruhcraft.fabrictinkering.supers.Material;
 import net.bruhcraft.fabrictinkering.supers.Part;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,29 +14,24 @@ import static net.bruhcraft.fabrictinkering.registries.ModRegisters.PART_REGISTR
 
 public class PartUtil {
 
-    public static ItemStack setPart(ItemStack itemStack, Part part){
-        if(!part.getPath().equals("__null__")){
-            NbtCompound nbt = new NbtCompound();
-            itemStack.writeNbt(nbt);
+    public static ItemStack setPart(ItemStack itemStack, Part part) {
+        Material material = MaterialUtil.materialFromItemStack(itemStack);
+        Item item = part.getBaseItem();
 
-            Item item = part.getBaseItem();
-            ItemStack newItemStack = item.getDefaultStack();
-            newItemStack.setCount(itemStack.getCount());
-            newItemStack.setNbt(nbt);
+        ItemStack newItemStack = item.getDefaultStack();
+        newItemStack = MaterialUtil.setMaterial(newItemStack, material);
+        newItemStack.setCount(itemStack.getCount());
 
-            return newItemStack;
-        }
-        return itemStack;
+        return newItemStack;
     }
 
-    public static Part getPart(ItemStack itemStack) {
-        //TODO: Work towards reducing null returns for this and getMaterial
-        //TODO: Can prob do a better check than simply ItemStack != null lol
-        if(itemStack != null){
-            String path = Registries.ITEM.getId(itemStack.getItem()).getPath();
-            return PART_REGISTRY.get(new Identifier(MOD_ID, path));
-        } else {
-            return ModParts.NO_PART;
+    public static Part partFromItemStack(ItemStack itemStack) {
+        String path = Registries.ITEM.getId(itemStack.getItem()).getPath();
+        Identifier identifier = Util.identifierFromPath(path);
+        Part part = PART_REGISTRY.get(identifier);
+        if(part != null){
+            return part;
         }
+        return ModParts.NO_PART;
     }
 }
