@@ -1,5 +1,6 @@
 package net.bruhcraft.fabrictinkering.registries;
 
+import net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks;
 import net.bruhcraft.fabrictinkering.registries.items.materials_and_you;
 import net.bruhcraft.fabrictinkering.registries.items.parts.*;
 import net.bruhcraft.fabrictinkering.registries.items.puny_smelting;

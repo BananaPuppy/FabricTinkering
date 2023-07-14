@@ -1,6 +1,6 @@
 package net.bruhcraft.fabrictinkering;
 
-import net.bruhcraft.fabrictinkering.registries.ModBlocks;
+import net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
