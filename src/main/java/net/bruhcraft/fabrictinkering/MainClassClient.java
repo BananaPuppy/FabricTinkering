@@ -1,28 +1,49 @@
 package net.bruhcraft.fabrictinkering;
 
-import net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks;
+import net.bruhcraft.fabrictinkering.registries.ModItems;
+import net.bruhcraft.fabrictinkering.registries.ModBlocks;
+import net.bruhcraft.fabrictinkering.registries.items.parts.repair_kit;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.util.Identifier;
+import org.spongepowered.include.com.google.common.base.Predicates;
 
 import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class MainClassClient implements ClientModInitializer {
 
+	//RenderLayerCutout Blocks
+	List<Block> toCutOut = List.of(
+			ModBlocks.PART_BUILDER,
+			ModBlocks.TINKER_STATION,
+			ModBlocks.PART_CHEST,
+			ModBlocks.TINKERS_CHEST
+	);
+
+	//Init
 	@Override
 	public void onInitializeClient() {
-		renderLayerCutout(List.of(
-				ModBlocks.PART_BUILDER,
-				ModBlocks.TINKER_STATION,
-				ModBlocks.PART_CHEST,
-				ModBlocks.TINKERS_CHEST
-		));
+		renderLayerCutout(toCutOut);
+
+		//TODO: Put Predicate Provider into its own method for organization
+		ModelPredicateProviderRegistry.register(ModItems.REPAIR_KIT, new Identifier("material"), (itemStack, clientWorld, livingEntity, i) -> {
+			if (itemStack == null) {
+				return 0.0f;
+			}
+			//Get&Set Custom Item Var?
+			return repair_kit.getMaterialNBT(itemStack);
+		});
+
 	}
 
+	//Util
 	public void renderLayerCutout(List<Block> blocks){
 		for(Block block : blocks){
 			BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());

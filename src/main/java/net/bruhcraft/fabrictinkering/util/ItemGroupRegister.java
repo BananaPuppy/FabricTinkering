@@ -1,5 +1,8 @@
 package net.bruhcraft.fabrictinkering.util;
 
+import net.bruhcraft.fabrictinkering.types.Material;
+import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
+import net.fabricmc.fabric.api.event.registry.RegistryAttribute;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,6 +17,7 @@ import net.minecraft.util.Identifier;
 import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 
 public class ItemGroupRegister {
+
     public static RegistryKey<ItemGroup> registerItemGroup(String id, Item icon, MutableText displayName){
         RegistryKey<ItemGroup> itemGroup = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID + id));
         Registry.register(Registries.ITEM_GROUP, itemGroup, FabricItemGroup.builder()

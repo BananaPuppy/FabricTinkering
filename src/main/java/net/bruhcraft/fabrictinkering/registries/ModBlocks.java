@@ -1,4 +1,4 @@
-package net.bruhcraft.fabrictinkering.registries.blocks;
+package net.bruhcraft.fabrictinkering.registries;
 
 import net.bruhcraft.fabrictinkering.registries.blocks.chests.part_chest;
 import net.bruhcraft.fabrictinkering.registries.blocks.chests.tinkers_chest;

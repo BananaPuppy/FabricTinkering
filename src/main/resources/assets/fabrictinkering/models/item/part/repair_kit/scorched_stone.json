@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fabrictinkering:item/parts/repair_kit/scorched_stone"
+  }
+}

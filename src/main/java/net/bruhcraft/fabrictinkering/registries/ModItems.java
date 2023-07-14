@@ -1,6 +1,5 @@
 package net.bruhcraft.fabrictinkering.registries;
 
-import net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks;
 import net.bruhcraft.fabrictinkering.registries.items.materials_and_you;
 import net.bruhcraft.fabrictinkering.registries.items.parts.*;
 import net.bruhcraft.fabrictinkering.registries.items.puny_smelting;
@@ -37,6 +36,7 @@ public class ModItems {
     public static final Item PUNY_SMELTING = new puny_smelting(new FabricItemSettings().maxCount(1));
     public static RegistryKey<ItemGroup> PUNY_SMELTING_GROUP = registerItemGroup("puny_smelting", PUNY_SMELTING, Text.translatable("itemgroup.fabrictinkering.puny_smelting"));
         //Tool Parts
+    public static final Item NULL_PART = new null_part(new FabricItemSettings().maxCount(64));
     public static final Item REPAIR_KIT = new repair_kit(new FabricItemSettings().maxCount(64));
     public static final Item PICK_HEAD = new pick_head(new FabricItemSettings().maxCount(64));
     public static final Item HAMMER_HEAD = new hammer_head(new FabricItemSettings().maxCount(64));
@@ -75,6 +75,7 @@ public class ModItems {
                 registerItem("puny_smelting", PUNY_SMELTING)
         ));
             //Parts
+        registerItem("null_part", NULL_PART);
         registerItemsToGroup(PARTS_GROUP, List.of(
                 registerItem("repair_kit", REPAIR_KIT), //
                 registerItem("pick_head", PICK_HEAD),
