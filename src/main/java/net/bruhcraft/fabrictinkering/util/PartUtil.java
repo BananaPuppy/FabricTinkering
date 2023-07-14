@@ -5,11 +5,9 @@ import net.bruhcraft.fabrictinkering.supers.Material;
 import net.bruhcraft.fabrictinkering.supers.Part;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
-import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 import static net.bruhcraft.fabrictinkering.registries.ModRegisters.PART_REGISTRY;
 
 public class PartUtil {

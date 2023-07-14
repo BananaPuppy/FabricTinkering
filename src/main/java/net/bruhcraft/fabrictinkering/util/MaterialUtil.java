@@ -6,13 +6,10 @@ import net.bruhcraft.fabrictinkering.supers.Material;
 import net.bruhcraft.fabrictinkering.supers.Part;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import org.apache.logging.log4j.core.filter.RegexFilter;
 
 import java.util.List;
 
-import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 import static net.bruhcraft.fabrictinkering.registries.ModRegisters.MATERIAL_REGISTRY;
 
 public class MaterialUtil {

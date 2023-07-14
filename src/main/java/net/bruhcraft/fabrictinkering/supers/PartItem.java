@@ -1,6 +1,5 @@
 package net.bruhcraft.fabrictinkering.supers;
 
-import net.bruhcraft.fabrictinkering.MainClass;
 import net.bruhcraft.fabrictinkering.registries.ModMaterials;
 import net.bruhcraft.fabrictinkering.registries.ModParts;
 import net.bruhcraft.fabrictinkering.util.MaterialUtil;
