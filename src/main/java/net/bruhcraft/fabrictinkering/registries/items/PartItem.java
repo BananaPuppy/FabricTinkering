@@ -1,7 +1,6 @@
 package net.bruhcraft.fabrictinkering.registries.items;
 
 import net.bruhcraft.fabrictinkering.registries.ModMaterials;
-import net.bruhcraft.fabrictinkering.registries.ModParts;
 import net.bruhcraft.fabrictinkering.types.Material;
 import net.bruhcraft.fabrictinkering.util.MaterialUtil;
 import net.bruhcraft.fabrictinkering.util.PartUtil;
@@ -10,7 +9,6 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionUtil;
 import net.minecraft.registry.Registries;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Text;

@@ -3,8 +3,8 @@ package net.bruhcraft.fabrictinkering.types;
 import java.util.List;
 
 public class Material {
-    private String path = "__null__";
-    private Integer predicate = 0;
+    private final String path;
+    private final Integer predicate;
     private List<Part> parts;
 
     public Material(String path, Integer predicate){

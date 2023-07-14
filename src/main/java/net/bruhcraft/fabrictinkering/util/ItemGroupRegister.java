@@ -1,8 +1,5 @@
 package net.bruhcraft.fabrictinkering.util;
 
-import net.bruhcraft.fabrictinkering.types.Material;
-import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
-import net.fabricmc.fabric.api.event.registry.RegistryAttribute;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

@@ -1,11 +1,8 @@
 package net.bruhcraft.fabrictinkering.util;
 
-import com.google.common.math.IntMath;
 import net.bruhcraft.fabrictinkering.registries.ModMaterials;
 import net.bruhcraft.fabrictinkering.types.Material;
 import net.bruhcraft.fabrictinkering.types.Part;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
@@ -24,8 +21,8 @@ public class MaterialUtil {
             itemStack.removeSubNbt(MATERIAL_KEY);
         } else {
             Identifier identifier = MATERIAL_REGISTRY.getId(material);
+            //TODO: PLACE TO REDUCE NULL
             itemStack.getOrCreateNbt().putString(MATERIAL_KEY, identifier.toString());
-            String keybase = "item.fabrictinkering.";
             itemStack.setCustomName(Text.translatable(itemStack.getItem().getTranslationKey()));
         }
         return itemStack;
@@ -34,6 +31,7 @@ public class MaterialUtil {
     public static Material getMaterial(ItemStack itemStack){
         NbtCompound nbt = new NbtCompound();
         itemStack.writeNbt(nbt);
+        //TODO: INVESTIGATE WHY THIS IS ALWAYS TRUE
         if(nbt != null && nbt.contains(MATERIAL_KEY)){
             String identifier = nbt.getString(MATERIAL_KEY);
             return MATERIAL_REGISTRY.get(Identifier.tryParse(identifier));

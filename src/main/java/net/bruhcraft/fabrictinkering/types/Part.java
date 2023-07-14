@@ -6,9 +6,9 @@ import net.minecraft.item.Items;
 import java.util.List;
 
 public class Part {
-    private String path = "__null__";
+    private final String path;
     private List<Material> materials;
-    private Item baseItem = Items.AIR;
+    private final Item baseItem;
 
     public Part(String name, Item baseItem){
         this.path = name;

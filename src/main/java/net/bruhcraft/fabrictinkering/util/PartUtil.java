@@ -2,8 +2,6 @@ package net.bruhcraft.fabrictinkering.util;
 
 import net.bruhcraft.fabrictinkering.registries.ModParts;
 import net.bruhcraft.fabrictinkering.types.Part;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
