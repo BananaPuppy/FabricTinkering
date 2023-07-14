@@ -1,4 +1,6 @@
 {
+    "itemgroup.fabrictinkering.materials_and_you": "Materials and You",
+
   "item.fabrictinkering.materials_and_you": "Materials and You",
   "item.fabrictinkering.materials_and_you.tooltip": "The introduction book into tools and materials",
   "item.fabrictinkering.materials_and_you.tooltip2": "by Selena",
@@ -11,9 +13,13 @@
   "block.fabrictinkering.grout": "Grout",
   "block.fabrictinkering.grout.tooltip": "I am Grout!",
 
+    "itemgroup.fabrictinkering.puny_smelting": "Puny Smelting",
+
   "item.fabrictinkering.puny_smelting": "Puny Smelting",
   "item.fabrictinkering.puny_smelting.tooltip": "Smelting and casting guidebook for beginners",
   "item.fabrictinkering.puny_smelting.tooltip2": "by Thruul M'Gon",
+
+    "itemgroup.fabrictinkering.tinkers_toolparts": "Tinkers' Toolparts",
 
   "item.fabrictinkering.base.tooltip": "Place in inventory to initialize Random materials",
   "item.fabrictinkering.repair_kit": "Repair Kit",

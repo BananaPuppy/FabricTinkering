@@ -12,6 +12,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -30,10 +31,10 @@ public class ModItems {
     public static final BlockItem PART_CHEST = new BlockItem(ModBlocks.PART_CHEST, new FabricItemSettings().maxCount(64));
     public static final BlockItem TINKERS_CHEST = new BlockItem(ModBlocks.TINKERS_CHEST, new FabricItemSettings().maxCount(64));
     public static final BlockItem GROUT = new grout(ModBlocks.GROUT, new FabricItemSettings().maxCount(64));
-    public static RegistryKey<ItemGroup> MATERIALS_AND_YOU_GROUP = registerItemGroup("Materials and You", MATERIALS_AND_YOU);
+    public static RegistryKey<ItemGroup> MATERIALS_AND_YOU_GROUP = registerItemGroup("materials_and_you", MATERIALS_AND_YOU, Text.translatable("itemgroup.fabrictinkering.materials_and_you"));
         //Puny Smelting
     public static final Item PUNY_SMELTING = new puny_smelting(new FabricItemSettings().maxCount(1));
-    public static RegistryKey<ItemGroup> PUNY_SMELTING_GROUP = registerItemGroup("Puny Smelting", PUNY_SMELTING);
+    public static RegistryKey<ItemGroup> PUNY_SMELTING_GROUP = registerItemGroup("puny_smelting", PUNY_SMELTING, Text.translatable("itemgroup.fabrictinkering.puny_smelting"));
         //Tool Parts
     public static final Item REPAIR_KIT = new repair_kit(new FabricItemSettings().maxCount(64));
     public static final Item PICK_HEAD = new pick_head(new FabricItemSettings().maxCount(64));
@@ -50,7 +51,7 @@ public class ModItems {
     public static final Item TOOL_BINDING = new tool_binding(new FabricItemSettings().maxCount(64));
     public static final Item TOOL_HANDLE = new tool_handle(new FabricItemSettings().maxCount(64));
     public static final Item TOUGH_HANDLE = new tough_handle(new FabricItemSettings().maxCount(64));
-    public static RegistryKey<ItemGroup> PARTS_GROUP = registerItemGroup("Tinkers Toolparts", PICK_HEAD);
+    public static RegistryKey<ItemGroup> PARTS_GROUP = registerItemGroup("tinkers_toolparts", PICK_HEAD, Text.translatable("itemgroup.fabrictinkering.tinkers_toolparts"));
         //Tools
     public static final Item TEST_TOOL = new Item(new FabricItemSettings());
 

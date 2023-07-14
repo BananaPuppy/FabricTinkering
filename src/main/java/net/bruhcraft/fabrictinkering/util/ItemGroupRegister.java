@@ -8,17 +8,18 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 
 public class ItemGroupRegister {
-    public static RegistryKey<ItemGroup> registerItemGroup(String name, Item icon){
-        RegistryKey<ItemGroup> itemGroup = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID + name.toLowerCase().replaceAll("\\s+", "_")));
+    public static RegistryKey<ItemGroup> registerItemGroup(String id, Item icon, MutableText displayName){
+        RegistryKey<ItemGroup> itemGroup = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID + id));
         Registry.register(Registries.ITEM_GROUP, itemGroup, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(icon))
-                .displayName(Text.translatable(name)).build());
+                .displayName(displayName).build());
         return itemGroup;
     }
 }
