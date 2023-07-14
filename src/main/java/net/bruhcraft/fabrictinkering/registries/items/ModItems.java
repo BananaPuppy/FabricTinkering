@@ -1,9 +1,7 @@
 package net.bruhcraft.fabrictinkering.registries.items;
 
 import net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks;
-import net.bruhcraft.fabrictinkering.registries.items.materials_and_you;
 import net.bruhcraft.fabrictinkering.registries.items.parts.*;
-import net.bruhcraft.fabrictinkering.registries.items.puny_smelting;
 import net.bruhcraft.fabrictinkering.registries.items.smeltery.seared.grout;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
