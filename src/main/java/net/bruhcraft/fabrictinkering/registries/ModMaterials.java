@@ -1,6 +1,5 @@
 package net.bruhcraft.fabrictinkering.registries;
 
-import net.bruhcraft.fabrictinkering.MainClass;
 import net.bruhcraft.fabrictinkering.registries.material.*;
 import net.bruhcraft.fabrictinkering.types.Material;
 import net.minecraft.registry.Registry;

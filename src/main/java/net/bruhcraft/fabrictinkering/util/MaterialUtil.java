@@ -10,7 +10,6 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
 import static net.bruhcraft.fabrictinkering.registries.ModRegisters.MATERIAL_REGISTRY;
 
 public class MaterialUtil {
@@ -29,10 +28,9 @@ public class MaterialUtil {
     }
 
     public static Material getMaterial(ItemStack itemStack){
-        NbtCompound nbt = new NbtCompound();
+        NbtCompound nbt = new NbtCompound(); //TODO:GETNBT??
         itemStack.writeNbt(nbt);
-        //TODO: INVESTIGATE WHY THIS IS ALWAYS TRUE
-        if(nbt != null && nbt.contains(MATERIAL_KEY)){
+        if(nbt.contains(MATERIAL_KEY)){
             String identifier = nbt.getString(MATERIAL_KEY);
             return MATERIAL_REGISTRY.get(Identifier.tryParse(identifier));
         }

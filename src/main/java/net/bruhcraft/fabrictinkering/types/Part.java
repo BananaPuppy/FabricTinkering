@@ -1,7 +1,6 @@
 package net.bruhcraft.fabrictinkering.types;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 
 import java.util.List;
 
@@ -19,10 +18,13 @@ public class Part {
         this.materials = materials;
     }
 
+
+    @SuppressWarnings("unused")
     public void addMaterial(Material material){
         this.materials.add(material);
     }
 
+    @SuppressWarnings("unused")
     public void removeMaterial(Material material){
         this.materials.remove(material);
     }

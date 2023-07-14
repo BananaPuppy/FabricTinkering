@@ -1,7 +1,5 @@
 package net.bruhcraft.fabrictinkering.types;
 
-import net.bruhcraft.fabrictinkering.MainClass;
-
 import java.util.List;
 
 public class Material {
@@ -18,10 +16,12 @@ public class Material {
         this.parts = parts;
     }
 
+    @SuppressWarnings("unused")
     public void addPart(Part part){
         this.parts.add(part);
     }
 
+    @SuppressWarnings("unused")
     public void removePart(Part part){
         this.parts.remove(part);
     }
@@ -29,6 +29,7 @@ public class Material {
     public List<Part> getParts(){
         return this.parts;
     }
+
 
     public boolean containsPart(Part part){
         return parts.contains(part);
@@ -39,8 +40,6 @@ public class Material {
     }
 
     public Float getPredicate(){
-        Float returnF = ((float)this.predicate) / 100000;
-        //TODO: TODO: TODO: MainClass.LOGGER.info(returnF.toString());
-        return returnF;
+        return ((float)this.predicate) / 100000;
     }
 }
