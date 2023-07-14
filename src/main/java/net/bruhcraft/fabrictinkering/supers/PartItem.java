@@ -1,7 +1,6 @@
-package net.bruhcraft.fabrictinkering.registries.items;
+package net.bruhcraft.fabrictinkering.supers;
 
 import net.bruhcraft.fabrictinkering.registries.ModMaterials;
-import net.bruhcraft.fabrictinkering.types.Material;
 import net.bruhcraft.fabrictinkering.util.MaterialUtil;
 import net.bruhcraft.fabrictinkering.util.PartUtil;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -29,7 +28,7 @@ public class PartItem extends Item {
         //TODO: Check if player is actually creating an item through the creative inventory?
         //TODO: Fixed Errors and now it's broken again lol
         if(clickType.equals(ClickType.LEFT) && player.isCreative()){
-            if(PartUtil.getPart(stack).getBaseItem() == stack.getItem() && MaterialUtil.getMaterial(stack) != ModMaterials.__NULL__){
+            if(PartUtil.getPart(stack).getBaseItem() == stack.getItem() && MaterialUtil.materialFromItemStack(stack) != ModMaterials.NO_MATERIAL){
                 MaterialUtil.setMaterial(stack, MaterialUtil.randomMaterial(PartUtil.getPart(stack)));
             }
         }
@@ -38,7 +37,7 @@ public class PartItem extends Item {
 
     @Override
     public ItemStack getDefaultStack() {
-        return MaterialUtil.setMaterial(super.getDefaultStack(), ModMaterials.__NULL__);
+        return MaterialUtil.setMaterial(super.getDefaultStack(), ModMaterials.NO_MATERIAL);
     }
 
     @Override
@@ -61,7 +60,7 @@ public class PartItem extends Item {
     @Override
     public String getTranslationKey(ItemStack itemStack) {
         String keybase = "item.fabrictinkering.";
-        Material m = MaterialUtil.getMaterial(itemStack);
+        Material m = MaterialUtil.materialFromItemStack(itemStack);
         if(PartUtil.getPart(itemStack) != null) {
             if (m.getPath() != null && PartUtil.getPart(itemStack).getPath() != null) {
                 String mpath = m.getPath();

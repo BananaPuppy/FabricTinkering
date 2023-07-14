@@ -1,7 +1,7 @@
 package net.bruhcraft.fabrictinkering.util;
 
 import net.bruhcraft.fabrictinkering.registries.ModParts;
-import net.bruhcraft.fabrictinkering.types.Part;
+import net.bruhcraft.fabrictinkering.supers.Part;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
@@ -35,7 +35,7 @@ public class PartUtil {
             String path = Registries.ITEM.getId(itemStack.getItem()).getPath();
             return PART_REGISTRY.get(new Identifier(MOD_ID, path));
         } else {
-            return ModParts.__NULL__;
+            return ModParts.NO_PART;
         }
     }
 }

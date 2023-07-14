@@ -1,24 +1,27 @@
 package net.bruhcraft.fabrictinkering.registries;
 
-import net.bruhcraft.fabrictinkering.registries.items.materials_and_you;
+import net.bruhcraft.fabrictinkering.registries.items.books.materials_and_you;
 import net.bruhcraft.fabrictinkering.registries.items.parts.*;
-import net.bruhcraft.fabrictinkering.registries.items.puny_smelting;
+import net.bruhcraft.fabrictinkering.registries.items.books.puny_smelting;
 import net.bruhcraft.fabrictinkering.registries.items.smeltery.seared.grout;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
 
 import static net.bruhcraft.fabrictinkering.MainClass.MOD_ID;
-import static net.bruhcraft.fabrictinkering.util.ItemGroupRegister.registerItemGroup;
 
 public class ModItems {
 
@@ -36,7 +39,7 @@ public class ModItems {
     public static final Item PUNY_SMELTING = new puny_smelting(new FabricItemSettings().maxCount(1));
     public static RegistryKey<ItemGroup> PUNY_SMELTING_GROUP = registerItemGroup("puny_smelting", PUNY_SMELTING, Text.translatable("itemgroup.fabrictinkering.puny_smelting"));
         //Tool Parts
-    public static final Item NULL_PART = new null_part(new FabricItemSettings().maxCount(64));
+    public static final Item NO_PART = new no_part(new FabricItemSettings().maxCount(64));
     public static final Item REPAIR_KIT = new repair_kit(new FabricItemSettings().maxCount(64));
     public static final Item PICK_HEAD = new pick_head(new FabricItemSettings().maxCount(64));
     public static final Item HAMMER_HEAD = new hammer_head(new FabricItemSettings().maxCount(64));
@@ -75,8 +78,8 @@ public class ModItems {
                 registerItem("puny_smelting", PUNY_SMELTING)
         ));
             //Parts
-        registerItem("null_part", NULL_PART);
         registerItemsToGroup(PARTS_GROUP, List.of(
+                registerItem("no_part", NO_PART), //
                 registerItem("repair_kit", REPAIR_KIT), //
                 registerItem("pick_head", PICK_HEAD),
                 registerItem("hammer_head", HAMMER_HEAD),
@@ -100,6 +103,14 @@ public class ModItems {
     //Util
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
+    }
+
+    public static RegistryKey<ItemGroup> registerItemGroup(String id, Item icon, MutableText displayName){
+        RegistryKey<ItemGroup> itemGroup = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID + id));
+        Registry.register(Registries.ITEM_GROUP, itemGroup, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(icon))
+                .displayName(displayName).build());
+        return itemGroup;
     }
 
     public static void registerItemToGroup(RegistryKey<ItemGroup> group, Item item){

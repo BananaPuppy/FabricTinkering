@@ -1,4 +1,4 @@
-package net.bruhcraft.fabrictinkering.types;
+package net.bruhcraft.fabrictinkering.supers;
 
 import net.minecraft.item.Item;
 

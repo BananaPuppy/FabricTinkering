@@ -1,7 +1,7 @@
 package net.bruhcraft.fabrictinkering.registries;
 
 import net.bruhcraft.fabrictinkering.registries.material.*;
-import net.bruhcraft.fabrictinkering.types.Material;
+import net.bruhcraft.fabrictinkering.supers.Material;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
@@ -10,7 +10,7 @@ import static net.bruhcraft.fabrictinkering.registries.ModRegisters.MATERIAL_REG
 
 public class ModMaterials {
     //Material Vars
-    public static Material __NULL__ = new __null__();
+    public static Material NO_MATERIAL = new no_material();
     public static Material ALUMINUM = new aluminum();
     public static Material AMETHYST_BRONZE = new amethyst_bronze();
     public static Material BAMBOO = new bamboo();
@@ -79,7 +79,7 @@ public class ModMaterials {
 
     //registerModStuff
     public static void registerModMaterials(){
-        __NULL__ = registerMaterial(__NULL__);
+        NO_MATERIAL = registerMaterial(NO_MATERIAL);
         ALUMINUM = registerMaterial(ALUMINUM);
         AMETHYST_BRONZE = registerMaterial(AMETHYST_BRONZE);
         BAMBOO = registerMaterial(BAMBOO);

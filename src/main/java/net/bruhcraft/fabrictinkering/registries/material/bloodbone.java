@@ -1,10 +1,10 @@
 package net.bruhcraft.fabrictinkering.registries.material;
 
-import net.bruhcraft.fabrictinkering.types.Material;
+import net.bruhcraft.fabrictinkering.supers.Material;
 
 public class bloodbone extends Material {
 
     public bloodbone() {
-        super("bloodbone", 5);
+        super("bloodbone", 5.0f);
     }
 }

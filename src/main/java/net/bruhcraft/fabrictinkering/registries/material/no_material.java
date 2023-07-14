@@ -2,9 +2,9 @@ package net.bruhcraft.fabrictinkering.registries.material;
 
 import net.bruhcraft.fabrictinkering.supers.Material;
 
-public class iron_oxidized extends Material {
+public class no_material extends Material {
 
-    public iron_oxidized() {
-        super("iron_oxidized", 24.0f);
+    public no_material() {
+        super("no_material", 0.1f);
     }
 }

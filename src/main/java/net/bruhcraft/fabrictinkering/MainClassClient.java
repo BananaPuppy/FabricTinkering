@@ -2,7 +2,6 @@ package net.bruhcraft.fabrictinkering;
 
 import net.bruhcraft.fabrictinkering.registries.ModItems;
 import net.bruhcraft.fabrictinkering.registries.ModBlocks;
-import net.bruhcraft.fabrictinkering.registries.items.parts.repair_kit;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -13,6 +12,8 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
+
+import static net.bruhcraft.fabrictinkering.util.MaterialUtil.predicateFromItemStack;
 
 @Environment(EnvType.CLIENT)
 public class MainClassClient implements ClientModInitializer {
@@ -36,7 +37,7 @@ public class MainClassClient implements ClientModInitializer {
 				return 0.0f;
 			}
 			//Get&Set Custom Item Var?
-			return repair_kit.getMaterialNBT(itemStack);
+			return predicateFromItemStack(itemStack);
 		});
 
 	}

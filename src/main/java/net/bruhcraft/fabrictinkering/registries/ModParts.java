@@ -1,9 +1,8 @@
 package net.bruhcraft.fabrictinkering.registries;
 
-import net.bruhcraft.fabrictinkering.registries.part.__null__;
 import net.bruhcraft.fabrictinkering.registries.part.*;
-import net.bruhcraft.fabrictinkering.types.Material;
-import net.bruhcraft.fabrictinkering.types.Part;
+import net.bruhcraft.fabrictinkering.supers.Material;
+import net.bruhcraft.fabrictinkering.supers.Part;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
@@ -17,7 +16,7 @@ import static net.bruhcraft.fabrictinkering.registries.ModRegisters.PART_REGISTR
 
 public class ModParts {
     //Part Vars
-    public static Part __NULL__ = new __null__();
+    public static Part NO_PART = new no_part();
     public static Part BOW_GRIP = new bow_grip();
     public static Part BOW_LIMB = new bow_limb();
     public static Part BOWSTRING = new bowstring();
@@ -46,7 +45,7 @@ public class ModParts {
         }
         REPAIR_KIT.setMaterials(list);
         //Registering
-        __NULL__ = registerPart(__NULL__);
+        NO_PART = registerPart(NO_PART);
         BOW_GRIP = registerPart(BOW_GRIP);
         BOW_LIMB = registerPart(BOW_LIMB);
         BOWSTRING = registerPart(BOWSTRING);

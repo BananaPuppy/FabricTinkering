@@ -1,7 +1,7 @@
 package net.bruhcraft.fabrictinkering.registries;
 
-import net.bruhcraft.fabrictinkering.types.Material;
-import net.bruhcraft.fabrictinkering.types.Part;
+import net.bruhcraft.fabrictinkering.supers.Material;
+import net.bruhcraft.fabrictinkering.supers.Part;
 import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
 import net.fabricmc.fabric.api.event.registry.RegistryAttribute;
 import net.minecraft.registry.Registry;

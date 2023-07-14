@@ -1,10 +1,10 @@
 package net.bruhcraft.fabrictinkering.registries.material;
 
-import net.bruhcraft.fabrictinkering.types.Material;
+import net.bruhcraft.fabrictinkering.supers.Material;
 
 public class darkthread extends Material {
 
     public darkthread() {
-        super("darkthread", 13);
+        super("darkthread", 13.0f);
     }
 }

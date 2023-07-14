@@ -1,4 +1,4 @@
-package net.bruhcraft.fabrictinkering.registries.items;
+package net.bruhcraft.fabrictinkering.registries.items.books;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
