@@ -1,5 +1,7 @@
 package net.bruhcraft.fabrictinkering.types;
 
+import net.bruhcraft.fabrictinkering.MainClass;
+
 import java.util.List;
 
 public class Material {
@@ -37,6 +39,8 @@ public class Material {
     }
 
     public Float getPredicate(){
-        return ((float)this.predicate) / 100000;
+        Float returnF = ((float)this.predicate) / 100000;
+        //TODO: TODO: TODO: MainClass.LOGGER.info(returnF.toString());
+        return returnF;
     }
 }

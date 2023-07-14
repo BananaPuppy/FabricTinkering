@@ -1,5 +1,6 @@
 package net.bruhcraft.fabrictinkering.registries;
 
+import net.bruhcraft.fabrictinkering.MainClass;
 import net.bruhcraft.fabrictinkering.registries.material.*;
 import net.bruhcraft.fabrictinkering.types.Material;
 import net.minecraft.registry.Registry;
@@ -151,6 +152,7 @@ public class ModMaterials {
     //Util
     //TODO: Material Groups
     public static Material registerMaterial(Material material) {
-        return Registry.register(MATERIAL_REGISTRY, new Identifier(MOD_ID, material.getPath()), material);
+        Identifier identifier = new Identifier(MOD_ID, material.getPath());
+        return Registry.register(MATERIAL_REGISTRY, identifier, material);
     }
 }
