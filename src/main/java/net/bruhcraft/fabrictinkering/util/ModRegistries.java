@@ -2,7 +2,7 @@ package net.bruhcraft.fabrictinkering.util;
 
 import static net.bruhcraft.fabrictinkering.MainClass.*;
 import static net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks.registerModBlocks;
-import static net.bruhcraft.fabrictinkering.registries.ModItems.registerModItems;
+import static net.bruhcraft.fabrictinkering.registries.items.ModItems.registerModItems;
 
 public class ModRegistries {
     public static void registerModStuff(){

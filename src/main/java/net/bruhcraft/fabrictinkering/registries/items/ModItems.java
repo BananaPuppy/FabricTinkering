@@ -1,4 +1,4 @@
-package net.bruhcraft.fabrictinkering.registries;
+package net.bruhcraft.fabrictinkering.registries.items;
 
 import net.bruhcraft.fabrictinkering.registries.blocks.ModBlocks;
 import net.bruhcraft.fabrictinkering.registries.items.materials_and_you;
